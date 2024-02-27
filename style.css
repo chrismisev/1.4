@@ -1,0 +1,237 @@
+
+/* Подключаем шрифты*/
+@font-face {
+    font-family:"TT Lakes" ;
+    src: local("TT Lakes Bold"),
+    url(./TTLakes/TTLakes-Bold.woff) format("woff"),
+    url(./TTLakes/TTLakes-Bold.eot) format("eembedded-opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    
+}
+
+@font-face {
+    font-family:"TT Lakes" ;
+    src: local("TT Lakes Medium"),
+    url(./TTLakes/TTLakes-Medium.woff) format("woff"),
+    url(./TTLakes/TTLakesCompressed-Medium.eot) format("eembedded-opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+    /* Общие параметры*/
+
+ *,
+ ::after,
+ ::before {
+
+ margin: 0;
+ padding: 0;
+list-style-type: none;
+ font-family:"TT Lakes", sans-serif;
+ font-size: 16px;
+ font-weight: 500;
+ letter-spacing: -0.2px;
+ line-height: 150%;
+ text-decoration: none;
+
+ button {
+    background-color: transparent;
+    border: none;
+    
+  }
+
+}
+ /* Общие параметры блока меню*/
+
+ .main_menu {
+    position: absolute;
+    width: 320px;
+    height: 100%;
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),-2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+    background: rgb(255, 255, 255);
+ }
+
+ /* МЕНЮ Часть шапки с 3 кнопками*/
+ 
+ .main_menu-header{
+  padding: 18.73px 24px 0 16px ;
+ }
+
+ .main_menu__countainer_all {
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .main_menu__countainer_close_logo {
+    display: flex;
+    flex-direction: row;
+    gap: 16.73px;
+ }
+
+  /*Навигацияпо сайту  */
+ 
+  .nav-list{
+ margin: 45.27px 0 81px 0;
+ padding: 0 16px 0 16px;
+ }
+
+ .nav-list__ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:10px;
+    margin-left: -16px;
+ }
+
+
+ .nav-list__item {
+  margin-bottom: 12px;
+  height: 24px;
+  padding-top: 6px;
+  padding-bottom: 4px;
+ 
+ }
+ 
+ .nav-list__item:focus,
+ .nav-list__item:hover {
+   
+   width: 4px;
+   height: 32px;
+   background-color: rgb(65, 246, 215);
+   white-space: nowrap; 
+   transition: 0.5s ease-in-out;
+   
+ }
+
+ .nav-list__item-link{
+   font-family: TT Lakes;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 150%;
+   letter-spacing: -0.2px;
+   cursor: default;
+   padding-left:16px;
+ }
+
+ .nav-list__item-link:focus,
+ .nav-list__item-link:hover {
+   color: rgb(126, 126, 130);
+   transition: 0.5s ease-in-out;
+ }
+
+ /*Подвал сайта  */
+
+ .main-menu_footer_info{
+  padding:0 16px 45px 16px ;
+ }
+
+ .footer-contats{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: flex-start;
+   align-items: flex-start;
+
+ }
+
+ .footer-contats__call-button{
+   margin-right:16px;
+   
+ }
+ 
+ .footer-contats__chat-button{
+   margin-right:16px;
+   
+ }
+ 
+
+ .footer-contats__profile-button{
+   margin-right:16px;
+   
+}
+
+.footer-contact-info{
+   display:flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   margin-top: 16px;
+}
+
+.footer-contact-info__mail{
+   font-style: "TT Lakes";
+   font-size: 16px;
+   line-height: 24px;
+   width: 110px;
+   height: 24px;
+}
+
+.footer-contact-info__number{
+   font-style: "TT Lakes";
+   font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+    
+}
+
+.footer-language{
+   margin-top: 40px;
+   display:flex ;
+   justify-content: flex-start;
+   gap: 10px;
+}
+
+
+.footer-language__button:focus,
+.footer-language__button:hover {
+
+color: rgb(126, 126, 130);
+cursor: pointer;
+transition: 0.5 ease-in-out;
+}
+
+
+/*Кнопки при наведении header  */
+
+.main_menu__button_close_svg:focus,
+.main_menu__button_close_svg:hover,
+.main_menu__button_search_svg:focus,
+.main_menu__button_search_svg:hover {
+  opacity: 0.6;
+ transition: 0.5 ease-in-out;
+}
+
+/*Кнопки при наведении footer  */
+.footer-contats__call-button:focus,
+.footer-contats__call-button:hover,
+.footer-contats__chat-button:focus,
+.footer-contats__chat-button:hover,
+.footer-contats__profile-button:focus,
+.footer-contats__profile-button:hover {
+   opacity: 0.6;
+   transition: 0.5 ease-in;
+}
+
+
+/* Изменения при разрешении экрана*/
+
+@media (min-width: 360px) {
+   .nav-list{
+      margin-top: 24px;
+      padding: 0 24px 0 24px;
+   }
+   .main_menu-header{
+      padding: 18.73px 24px 0 24px;
+   }
+
+   .nav-list__ul{
+      margin-left: -24px;
+   }
+   .main-menu_footer_info{
+      padding: 0 24px 32px 24px;
+   }
+}
